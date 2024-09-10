@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const thumbnail = document.createElement('img');
         thumbnail.src = `thumbnails/${pdf.thumbnail}`;
-        thumbnail.alt = `Miniatura de ${pdf.file}`;
+        thumbnail.alt = `Miniatura de ${pdf}`;
         thumbnail.classList.add('thumbnail');
 
         const title = document.createElement('h3');
