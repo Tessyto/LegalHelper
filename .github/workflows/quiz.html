@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portal Legal Preguntas y Respuestas</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Inicio</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="bookreader.html">Libros</a></li> <!-- Nueva pestaña -->
+            </ul>
+        </nav>
+    </header>
+    <div class = "menu">
+        <label>
+            <input type="checkbox" id="voice-toggle" checked>
+            Leer respuestas en voz alta
+        </label>
+        <label for="voice-language">Idioma</label>
+        <select id="voice-language">
+            <option value="es-ES">Espanol</option>
+            <option value="en-EN">Ingles</option>
+            <option value="fr-FR">Frances</option>
+        </select>
+    </div>
+    <div class="app">
+        <h1>Preguntas y Respuestas</h1>
+        <div id="module-info">
+            <h2 id="module-title">Módulo Actual</h2>
+            <p id="module-progress">Progreso: 0 de 0</p>
+        </div>
+        <div class="quiz">
+            <h2 id="question">PLACEHOLDER</h2>
+            <div id="answer-buttons">
+                <button class="btn">Respuesta_1</button>
+                <button class="btn">Respuesta_2</button>
+                <button class="btn">Respuesta_3</button>
+                <button class="btn">Respuesta_4</button>
+            </div>
+            <div id="reference" class="reference"></div>
+            <button id="next-btn">Siguiente</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
