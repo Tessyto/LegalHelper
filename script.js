@@ -113,7 +113,7 @@ function updateProgress() {
 }
 
 function startTimer() {
-    timeLeft = 10;
+    timeLeft = 30;
     document.getElementById('time').textContent = timeLeft;
     timerInterval = setInterval(function() {
         timeLeft--;
