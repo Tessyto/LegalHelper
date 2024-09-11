@@ -70,6 +70,8 @@ let currentModuleIndex = 0;
 let currentQuestionIndex = 0;
 let score = 0;
 let correctAnswers = 0;
+let timeLeft = 30;
+let timerInterval;
 
 const moduleTitleElement = document.getElementById("module-title");
 const moduleProgressElement = document.getElementById("module-progress");
@@ -110,10 +112,39 @@ function updateProgress() {
     moduleProgressElement.innerHTML = `Progreso: ${answeredQuestionsInModule} de ${totalQuestionsInModule}`;
 }
 
+function startTimer() {
+    timeLeft = 10;
+    document.getElementById('time').textContent = timeLeft;
+    timerInterval = setInterval(function() {
+        timeLeft--;
+        document.getElementById('time').textContent = timeLeft;
 
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            handleTimeUp();
+        }
+    }, 1000);
+}
+
+function handleTimeUp() {
+    alert("Se acabó el tiempo");
+}
+
+nextButton.addEventListener("click", () => {
+    speechSynthesis.cancel();
+    if (nextButton.innerHTML === "Repetir") {
+        startQuiz();
+    }
+    else {
+        handleNextButton();
+        startTimer();
+    }
+    
+});
 
 function showQuestion() {
     resetState();
+    startTimer();
     const currentModule = modules[currentModuleIndex];
     const currentQuestion = currentModule.questions[currentQuestionIndex];
     questionElement.innerHTML = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
@@ -259,6 +290,7 @@ nextButton.addEventListener("click", () => {
     }
     else {
         handleNextButton();
+        startTimer();
     }
     
 });
