@@ -128,6 +128,9 @@ function startTimer() {
 
 function handleTimeUp() {
     alert("Se acabó el tiempo");
+    Array.from(answerButtons.children).forEach(button => {
+        button.disabled = true;
+        incorrectAudio.play();
 }
 
 nextButton.addEventListener("click", () => {
@@ -137,14 +140,13 @@ nextButton.addEventListener("click", () => {
     }
     else {
         handleNextButton();
-        startTimer();
     }
     
 });
 
 function showQuestion() {
     resetState();
-    startTimer();
+
     const currentModule = modules[currentModuleIndex];
     const currentQuestion = currentModule.questions[currentQuestionIndex];
     questionElement.innerHTML = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
@@ -164,6 +166,7 @@ function showQuestion() {
     });
 
     updateProgress();
+    startTimer();
 }
 
 function shuffleArray(array) {
@@ -290,7 +293,6 @@ nextButton.addEventListener("click", () => {
     }
     else {
         handleNextButton();
-        startTimer();
     }
     
 });
