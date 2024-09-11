@@ -112,37 +112,6 @@ function updateProgress() {
     moduleProgressElement.innerHTML = `Progreso: ${answeredQuestionsInModule} de ${totalQuestionsInModule}`;
 }
 
-function startTimer() {
-    timeLeft = 30;
-    document.getElementById('time').textContent = timeLeft;
-    timerInterval = setInterval(function() {
-        timeLeft--;
-        document.getElementById('time').textContent = timeLeft;
-
-        if (timeLeft <= 0) {
-            clearInterval(timerInterval);
-            handleTimeUp();
-        }
-    }, 1000);
-}
-
-function handleTimeUp() {
-    alert("Se acabó el tiempo");
-    Array.from(answerButtons.children).forEach(button => {
-        button.disabled = true;
-        incorrectAudio.play();
-}
-
-nextButton.addEventListener("click", () => {
-    speechSynthesis.cancel();
-    if (nextButton.innerHTML === "Repetir") {
-        startQuiz();
-    }
-    else {
-        handleNextButton();
-    }
-    
-});
 
 function showQuestion() {
     resetState();
@@ -166,7 +135,6 @@ function showQuestion() {
     });
 
     updateProgress();
-    startTimer();
 }
 
 function shuffleArray(array) {
