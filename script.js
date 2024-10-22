@@ -221,54 +221,6 @@ const modules = [
         ],
         passingScore: 24 // Porcentaje mínimo para aprobar el módulo
     },
-    {
-        title: "Módulo 2: Derecho Civil",
-        questions: [
-            {
-                question: "¿Qué es un contrato?",
-                answers: [
-                    {text: "Un acuerdo legal entre partes", correct: true, reference: "Código Civil"},
-                    {text: "Un documento administrativo", correct: false},
-                    {text: "Una norma general", correct: false},
-                    {text: "Una sanción judicial", correct: false},
-                    ]
-            },
-        ],
-        passingScore: 1 // Porcentaje mínimo para aprobar el módulo
-    },
-    {
-        title: "Modulo 3: Variada",
-        questions: [
-            {
-                question: "Que es ley?",
-                answers: [
-                    {text: "Toda norma de derecho", correct: true, reference: "Consulta: Dr. Alfredo Perez Guerrero"},
-                    {text: "La declaracion de la voluntad soberana que, manifestada en la forma prescrita por la Constitucion manda, prohibe o permite", correct: true, reference: "Art. 1 Codigo Civil Ecuatoriano"},
-                    {text: "Algo obligatorio que las personas no pueden omitir cumplir al ser parte de un Estado", correct: false},
-                    {text: "Directrices o lineamientos que regulan la conducta de las personas", correct: false},
-                    ]
-            },
-            {
-                question: "Que son los derechos?",
-                answers: [
-                    {text: "Lo contrario de los izquierdos", correct: false},
-                    {text: "Una ideologia", correct: false},
-                    {text: "Conjunto de normas, leyes y principios que regulan la conducta del hombre en un momento historico determinado", correct: true},
-                    {text: "Un privilegio", correct: false},
-                    ]
-            },
-            {
-                question: "Que son los principios?",
-                answers: [
-                    {text: "Mandatos de optimizacion", correct: true},
-                    {text: "Un comienzo", correct: false},
-                    {text: "Una cualidad del ser civil", correct: false},
-                    {text: "Una garantia", correct: false},
-                    ]
-            },    
-        ],
-        passingScore: 3
-    } 
 ];
     // Añade más módulos según sea necesaris
 
