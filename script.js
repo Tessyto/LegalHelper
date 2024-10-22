@@ -276,8 +276,6 @@ let currentModuleIndex = 0;
 let currentQuestionIndex = 0;
 let score = 0;
 let correctAnswers = 0;
-let timeLeft = 30;
-let timerInterval;
 
 const moduleTitleElement = document.getElementById("module-title");
 const moduleProgressElement = document.getElementById("module-progress");
